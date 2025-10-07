@@ -1,0 +1,87 @@
+# =========================
+#  LaTeX / Beamer .gitignore
+# =========================
+
+# --- Ignore top-level generated PDF slides ---
+# (Keeps figure PDFs in subfolders)
+# Ignore only root PDFs, not figs/*.pdf
+/*.pdf
+
+# --- LaTeX build artifacts ---
+*.dvi
+*.xdv
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.lof
+*.lot
+*.lol
+*.idx
+*.ilg
+*.ind
+
+# --- Package-generated files ---
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.xdy
+
+# --- Temporary and backup files ---
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+*.DS_Store
+*.auxlock
+*.old
+
+# --- latexmk / arara logs ---
+latexmk
+arara.log
+
+# --- Editor configs ---
+.vscode/
+Session.vim
+*.lua-backup
+
+# --- TikZ externalization, plots, caches ---
+tikzexternal/
+*.gnuplot
+*.table
+*.dat
+cache/
+_build/
+output/
+temp/
+tmp/
+
+# --- Keep important source files ---
+#!*.tex
+#!*.sty
+#!*.cls
+#!*.bib
+#!*.bst
+#!*.png
+#!*.jpg
+#!*.jpeg
+#!*.eps
+#!*.pdf
+#!figs/**
+#!images/**
+#!plots/**
