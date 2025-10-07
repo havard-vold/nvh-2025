@@ -1,6 +1,9 @@
 # =========================
 #  LaTeX / Beamer .gitignore
 # =========================
+# --- Ignore the windows .zone.identifiers
+# Windows NTFS ADS metadata
+*Zone.Identifier
 
 # --- Ignore top-level generated PDF slides ---
 # (Keeps figure PDFs in subfolders)
