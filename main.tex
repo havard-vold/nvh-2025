@@ -135,11 +135,66 @@
 
 % ===== Section 3 =====
 \section{Modal Testing}
-\subsection{Multiple Exciter Locations}
 
-\begin{frame}{tullball}
-  \frametitle{zatopek}
-  
+\subsection{Parameter Estimation}
+
+\begin{frame}{Polyreference Time Domain}
+  \begin{block}{The AHA! moments}
+    \begin{itemize}[<+->]
+    \item It was observed that a least square average was possible with the Prony method by using a set of unit impulse response functions for sharper parameter estimates    
+    \item I noticed that the scalar equations still made sense when looking at vector time histories of free decay
+    \item Yes, we now had to pay homage to non commutation and transpose and complex conjugate when required. Same formulae, but written in \bf{boldfaced type}
+  \end{itemize}
+\end{block}
+
+\uncover<+->{
+  \begin{block}{Polyreference}
+   \begin{itemize}
+     \item Can now resolve repeated roots with full subspace of eigenvectors
+     \item We're saving space by using the reciprocity theorem and looking at unit impulse responses for the excitation freedoms only
+     \item Perfect companion for simultaneous incoherent multishaker excitation
+   \end{itemize} 
+  \end{block}
+}
+\end{frame}
+
+\begin{frame}[t]{Prony Algorithm}
+  Baron Gaspard Clair François Marie Riche de Prony, 1755 -- 1839
+  \vspace{8mm}
+  \begin{itemize}[<+->]
+    \item Prony devised in 1795 an algorithm to estimate an expansion of exponentials to a measured function.
+    \item Spitznogle of the US Navy used the same method, but with complex exponentials to investigate radar signals and to account for oscillation and damping. The year was 1955.
+    \item Around 1980 the idea was introduced as the \it{complex exponential} method to experimental modal analysis.
+  \end{itemize} 
+  \vspace{5mm}
+  \begin{block}{The paper that started it all}
+  \it{Essai expérimental et analytique sur les lois de la dilabilité des
+fluides élastiques, et sur celles de la force expansive de la vapeur de l’eau
+et de la vapeur de l’alkool, à différentes températures}, Journal de l’École
+polytechnique 2 (1795), 24 – 77.
+\end{block}
+\end{frame}
+
+
+\subsection{Multiple Exciter Locations}
+\begin{frame}[t]{Simultaneous Partially Incoherent Excitation}
+  \begin{block}{Features}
+    \begin{itemize}[<+->]
+      \item Even distribution of energy across structure
+      \item Excite more modes
+      \item Consistent response relative to all exciter locations
+      \item Faster!!
+    \end{itemize}
+  \end{block}
+  \begin{block}{Gotchas}
+    \begin{itemize}[<+->]
+      \item More instrumentation
+      \item Nonlinear structures will not reach limit cycle
+      \item Symmetric excitation on symmetric structures defeats purpose
+      \item Multiple coherence is often too optimistic
+      \item $H_2$ FRF estimator unavailable; $H_1$ and $H_v$ work as expected
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \subsection{Shuttle Orbiter Modal Test 1983}
