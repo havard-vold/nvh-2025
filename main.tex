@@ -55,6 +55,7 @@
 
 % ===== Outline =====
 \section[Outline]{}
+% \frame{\frametitle{Outline} \tableofcontents}
 \frame{\frametitle{Outline} \tableofcontents}
 
 \AtBeginSection[] {
@@ -63,80 +64,41 @@
   \end{frame}
 }
 
-% ===== Section 1 =====
-% \section{Motivation}
-
-% \begin{frame}{Problem Statement}
-% \begin{itemize}
-%   \item Concise bullet point with \alert{highlight}.
-%   \item Another point with a small math example:
-%     \[
-%       f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-%     \]
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{Two-Column Layout}
-% \begin{columns}[T,onlytextwidth]
-%   \begin{column}{0.52\textwidth}
-%     \textbf{Left:} bullet list
-%     \begin{itemize}
-%       \item Key idea A
-%       \item Key idea B
-%     \end{itemize}
-%   \end{column}
-%   \begin{column}{0.44\textwidth}
-%     \textbf{Right:} figure
-%     \begin{figure}
-%       \centering
-%       \includegraphics[width=\linewidth]{logo.png}% replace with your file
-%       \caption{Example figure.}
-%     \end{figure}
-%   \end{column}
-% \end{columns}
-% \end{frame}
-
-% % ===== Section 2 =====
-% \section{Method}
-
-% \begin{frame}[t]{Theorem/Proof (numbered)}
-% \begin{block}{Theorem}
-% Let $A\in\R^{n\times n}$ be symmetric positive definite. Then it has $n$ positive eigenvalues and admits a Cholesky factorization.
-% \end{block}
-
-% \begin{exampleblock}{Sketch of Proof}
-% Use the spectral theorem for real symmetric matrices. For the factorization, apply induction or standard constructive proofs.
-% \end{exampleblock}
-% \end{frame}
-
-% \begin{frame}{Displayed Math and Steps}
-% We minimize
-% \[
-%   \argmin_{x\in\R^n} \; \tfrac12\|Ax-b\|_2^2 + \lambda\|x\|_1.
-% \]
-% \pause
-% Using a proximal gradient step:
-% \[
-%   x^{k+1} = \mathrm{soft}\bigl(x^k - \tau A^\top(Ax^k-b),\, \tau\lambda\bigr).
-% \]
-% \end{frame}
-
-% \begin{frame}{TikZ Diagram}
-% \centering
-% \begin{tikzpicture}[node distance=1.6cm]
-%   \tikzstyle{box}=[draw,rounded corners,inner sep=6pt,align=center]
-%   \node[box] (a) {Input $x$};
-%   \node[box,right=of a] (b) {$A$};
-%   \node[box,right=of b] (c) {Output $y_{\aleph}=A^H_{\alpha}\tilde{x}$};
-%   \draw[-{Latex[length=3mm]}] (a) -- (b);
-%   \draw[-{Latex[length=3mm]}] (b) -- (c);
-% \end{tikzpicture}
-% \end{frame}
-
 % ===== Section 3 =====
+\section{Places I have been}
+\begin{frame}[t]{Places I have been}
+  \begin{itemize}[<+->]
+    \item Institute of Mathematics, University of Oslo
+    \item Institut f\"u{}r Statik und Dynamik (ISD), University of Stuttgart
+    \item Structural Dynamics Research Corporation, Cincinnati, Ohio
+    \item SDRL, University of Cincinnati, Ohio
+    \item ATA Engineering, San Diego, California
+    \item Vold LLC, back on the farm in M\aa{}ndalen, Norway
+  \end{itemize}
+\end{frame}
+
 \section{Modal Testing}
 
 \subsection{Parameter Estimation}
+
+\begin{frame}[t]{Prony Algorithm}
+  Baron Gaspard Clair François Marie Riche de Prony, 1755 -- 1839
+  \vspace{8mm}
+  \begin{itemize}[<+->]
+    \item Prony devised in 1795 an algorithm to estimate an expansion of exponentials to a measured function.
+    \item Spitznogle of the US Navy used the same method, but with complex exponentials to investigate radar signals and to account for oscillation and damping. The year was 1955.
+    \item Around 1980 the idea was introduced as the \it{complex exponential} method to experimental modal analysis.
+  \end{itemize} 
+  \vspace{5mm}
+  \uncover<+->{
+  \begin{block}{The paper that started it all}
+  \it{Essai expérimental et analytique sur les lois de la dilabilité des
+fluides élastiques, et sur celles de la force expansive de la vapeur de l’eau
+et de la vapeur de l’alkool, à différentes températures}, Journal de l’École
+polytechnique 2 (1795), 24 – 77.
+\end{block}
+}
+\end{frame}
 
 \begin{frame}{Polyreference Time Domain}
   \begin{block}{The AHA! moments}
@@ -144,6 +106,7 @@
     \item It was observed that a least square average was possible with the Prony method by using a set of unit impulse response functions for sharper parameter estimates    
     \item I noticed that the scalar equations still made sense when looking at vector time histories of free decay
     \item Yes, we now had to pay homage to non commutation and transpose and complex conjugate when required. Same formulae, but written in \bf{boldfaced type}
+    \item Instead of finding zeros of a scalar polynomial we now determine the eigenstructure of a high order matrix polynomial
   \end{itemize}
 \end{block}
 
@@ -156,23 +119,6 @@
    \end{itemize} 
   \end{block}
 }
-\end{frame}
-
-\begin{frame}[t]{Prony Algorithm}
-  Baron Gaspard Clair François Marie Riche de Prony, 1755 -- 1839
-  \vspace{8mm}
-  \begin{itemize}[<+->]
-    \item Prony devised in 1795 an algorithm to estimate an expansion of exponentials to a measured function.
-    \item Spitznogle of the US Navy used the same method, but with complex exponentials to investigate radar signals and to account for oscillation and damping. The year was 1955.
-    \item Around 1980 the idea was introduced as the \it{complex exponential} method to experimental modal analysis.
-  \end{itemize} 
-  \vspace{5mm}
-  \begin{block}{The paper that started it all}
-  \it{Essai expérimental et analytique sur les lois de la dilabilité des
-fluides élastiques, et sur celles de la force expansive de la vapeur de l’eau
-et de la vapeur de l’alkool, à différentes températures}, Journal de l’École
-polytechnique 2 (1795), 24 – 77.
-\end{block}
 \end{frame}
 
 
@@ -197,7 +143,26 @@ polytechnique 2 (1795), 24 – 77.
   \end{block}
 \end{frame}
 
-\subsection{Shuttle Orbiter Modal Test 1983}
+\subsection{Structural Modification using FRF}
+\begin{frame}[t]{SMURF by Lagrange Multipliers}
+  \begin{block}{History}
+    \begin{itemize}[<+->]
+      \item Structural modification for tuning dampers was popular in the late seventies
+      \item At SDRC we decided to try to enforce linear constraints on experimental FRF matrices
+      \item In 1983 we published a simple solution with Lagrange multipliers and had some success
+      \item But we stopped at simple problems because we ran into problems since we did not have rotational measurements
+    \end{itemize}
+  \end{block}
+  \begin{block}{Now, however}
+    \begin{itemize}[<+->]
+      \item Around 2010 in M\"u{}nchen and Delft, researchers picked this up again and added \it{virtual degrees of freedom}
+      \item These virtual freedeoms were constructed as linear functions of measured freedoms and could e.g., give reasonable estimates for the rotations that we could not measure and therefore gave up
+      \item This has given a totally new life to blocked forces and dynamic substructuring at high frequencies
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Shuttle Orbiter Modal Test 1983}
 
 \begin{frame}
   \frametitle{First Large Scale Multishaker Modal Test}
@@ -217,38 +182,28 @@ polytechnique 2 (1795), 24 – 77.
     \center{Screwed up the paperwork and had to leave it at Edwards AFB}
 \end{frame}
 
-
-% \begin{frame}{Figure with Caption and Reference}
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.7\linewidth]{logo.png}
-%   \caption{Performance vs. size.}
-%   \label{fig:perf}
-% \end{figure}
-% As seen in Fig.%~\ref{fig:perf}, the method scales sublinearly.
-% \end{frame}
-
-% \begin{frame}{Side-by-Side Lists}
-% \begin{columns}[T,onlytextwidth]
-%   \begin{column}{0.48\textwidth}
-%     \textbf{Pros}
-%     \begin{itemize}
-%       \item Simple
-%       \item Fast
-%       \item Robust
-%     \end{itemize}
-%   \end{column}
-%   \begin{column}{0.48\textwidth}
-%     \textbf{Cons}
-%     \begin{itemize}
-%       \item Needs tuning
-%       \item Assumes convexity
-%     \end{itemize}
-%   \end{column}
-% \end{columns}
-% \end{frame}
-
 %adding in the old material
+\section{Vold-Kalman Filter}
+\begin{frame}[t]{Tracking Unsteady Sinusoids inspired by Bucy and Kalman}
+ \begin{block}{History}
+   \begin{itemize}[<+->]
+    \item[ 1993] Vold and Leuridan published a paper on the time domain extraction of orders with phase and amplitude information from rotating systems with rapidly changing rotary speeds
+    \item[ 1995] Vold developed a second generation algorithm that could resolve close and crossing orders from systems with multiple independent exciting sources
+  \end{itemize}
+ \end{block} 
+ \uncover<+->{
+\begin{block}{The good and the bad}
+  \begin{itemize}[<+->]
+    \item No phase bias since the formulations are symmetric in time
+    \item Original signal could be edited for sound quality studies since no phase bias
+    \item Same time resolution as the original time histories
+    \item Setting the bandwidth was alchemy until 2004 when Jiri Tuma found an analytical formula
+    \item Compute time used to be atrocious, but is now much more reasonable
+ \end{itemize} 
+\end{block}
+ }
+\end{frame}
+
  
 \section{Spacecraft Cabin Ventilation Fan in NASA Glenn Acoustical Test Laboratory}
 \frame{\frametitle{Spacecraft Cabin Ventilation Fan in Acoustical Test Lab}
