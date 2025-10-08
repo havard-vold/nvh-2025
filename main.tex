@@ -64,77 +64,79 @@
 }
 
 % ===== Section 1 =====
-\section{Motivation}
+% \section{Motivation}
 
-\begin{frame}{Problem Statement}
-\begin{itemize}
-  \item Concise bullet point with \alert{highlight}.
-  \item Another point with a small math example:
-    \[
-      f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-    \]
-\end{itemize}
-\end{frame}
+% \begin{frame}{Problem Statement}
+% \begin{itemize}
+%   \item Concise bullet point with \alert{highlight}.
+%   \item Another point with a small math example:
+%     \[
+%       f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+%     \]
+% \end{itemize}
+% \end{frame}
 
-\begin{frame}{Two-Column Layout}
-\begin{columns}[T,onlytextwidth]
-  \begin{column}{0.52\textwidth}
-    \textbf{Left:} bullet list
-    \begin{itemize}
-      \item Key idea A
-      \item Key idea B
-    \end{itemize}
-  \end{column}
-  \begin{column}{0.44\textwidth}
-    \textbf{Right:} figure
-    \begin{figure}
-      \centering
-      \includegraphics[width=\linewidth]{logo.png}% replace with your file
-      \caption{Example figure.}
-    \end{figure}
-  \end{column}
-\end{columns}
-\end{frame}
+% \begin{frame}{Two-Column Layout}
+% \begin{columns}[T,onlytextwidth]
+%   \begin{column}{0.52\textwidth}
+%     \textbf{Left:} bullet list
+%     \begin{itemize}
+%       \item Key idea A
+%       \item Key idea B
+%     \end{itemize}
+%   \end{column}
+%   \begin{column}{0.44\textwidth}
+%     \textbf{Right:} figure
+%     \begin{figure}
+%       \centering
+%       \includegraphics[width=\linewidth]{logo.png}% replace with your file
+%       \caption{Example figure.}
+%     \end{figure}
+%   \end{column}
+% \end{columns}
+% \end{frame}
 
-% ===== Section 2 =====
-\section{Method}
+% % ===== Section 2 =====
+% \section{Method}
 
-\begin{frame}[t]{Theorem/Proof (numbered)}
-\begin{block}{Theorem}
-Let $A\in\R^{n\times n}$ be symmetric positive definite. Then it has $n$ positive eigenvalues and admits a Cholesky factorization.
-\end{block}
+% \begin{frame}[t]{Theorem/Proof (numbered)}
+% \begin{block}{Theorem}
+% Let $A\in\R^{n\times n}$ be symmetric positive definite. Then it has $n$ positive eigenvalues and admits a Cholesky factorization.
+% \end{block}
 
-\begin{exampleblock}{Sketch of Proof}
-Use the spectral theorem for real symmetric matrices. For the factorization, apply induction or standard constructive proofs.
-\end{exampleblock}
-\end{frame}
+% \begin{exampleblock}{Sketch of Proof}
+% Use the spectral theorem for real symmetric matrices. For the factorization, apply induction or standard constructive proofs.
+% \end{exampleblock}
+% \end{frame}
 
-\begin{frame}{Displayed Math and Steps}
-We minimize
-\[
-  \argmin_{x\in\R^n} \; \tfrac12\|Ax-b\|_2^2 + \lambda\|x\|_1.
-\]
-\pause
-Using a proximal gradient step:
-\[
-  x^{k+1} = \mathrm{soft}\bigl(x^k - \tau A^\top(Ax^k-b),\, \tau\lambda\bigr).
-\]
-\end{frame}
+% \begin{frame}{Displayed Math and Steps}
+% We minimize
+% \[
+%   \argmin_{x\in\R^n} \; \tfrac12\|Ax-b\|_2^2 + \lambda\|x\|_1.
+% \]
+% \pause
+% Using a proximal gradient step:
+% \[
+%   x^{k+1} = \mathrm{soft}\bigl(x^k - \tau A^\top(Ax^k-b),\, \tau\lambda\bigr).
+% \]
+% \end{frame}
 
-\begin{frame}{TikZ Diagram}
-\centering
-\begin{tikzpicture}[node distance=1.6cm]
-  \tikzstyle{box}=[draw,rounded corners,inner sep=6pt,align=center]
-  \node[box] (a) {Input $x$};
-  \node[box,right=of a] (b) {$A$};
-  \node[box,right=of b] (c) {Output $y=Ax$};
-  \draw[-{Latex[length=3mm]}] (a) -- (b);
-  \draw[-{Latex[length=3mm]}] (b) -- (c);
-\end{tikzpicture}
-\end{frame}
+% \begin{frame}{TikZ Diagram}
+% \centering
+% \begin{tikzpicture}[node distance=1.6cm]
+%   \tikzstyle{box}=[draw,rounded corners,inner sep=6pt,align=center]
+%   \node[box] (a) {Input $x$};
+%   \node[box,right=of a] (b) {$A$};
+%   \node[box,right=of b] (c) {Output $y_{\aleph}=A^H_{\alpha}\tilde{x}$};
+%   \draw[-{Latex[length=3mm]}] (a) -- (b);
+%   \draw[-{Latex[length=3mm]}] (b) -- (c);
+% \end{tikzpicture}
+% \end{frame}
 
 % ===== Section 3 =====
-\section{Results}
+\section{Modal Testing}
+\subsection{Multiple Exciter Locations}
+
 
 \begin{frame}
   \begin{figure}
@@ -155,7 +157,7 @@ Using a proximal gradient step:
 \begin{frame}
   \begin{figure}
     \centering
-    \includegraphics[width=0.65\linewidth,height=7cm]{Shuttle-1983-1}
+    \includegraphics[width=0.65\linewidth,height=7cm]{Shuttle-1983}
     \caption{Claiming the Shuttle Orbiter Vehicle for Norway, 1983}
   \end{figure}
 \end{frame}
